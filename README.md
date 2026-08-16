@@ -307,6 +307,15 @@ MongoDB, accessed via Motor. Collections found in `utils/func.py`:
 | **Local Linux / VPS / Ubuntu** | ✅ Supported | Install `requirements.txt` + `ffmpeg`, set env vars, run `python3 main.py` |
 | **Windows** | ⚠️ Should work | No Windows-specific code found, but untested; ffmpeg must be installed and on PATH |
 | **Termux** | ⚠️ Likely works | Same requirements as Linux; OpenCV/ffmpeg installs may need extra Termux packages |
+Deploy on Google Colab (Temporary/Testing)
+�
+Click the badge above to open the deployment notebook directly in Google Colab. Run the cells top to bottom:
+Clone & Install — clones this repo and installs requirements.txt.
+Set Environment Variables — fill in the fields directly in the notebook cell (API_ID, API_HASH, BOT_TOKEN, MONGO_DB, OWNER_ID, etc. — see Environment Variables above).
+Start Bot — runs main.py in the background.
+View Logs — check that the bot started without errors.
+Keep-Alive — run and leave this cell running to keep the session active.
+⚠️ Colab sessions are temporary (disconnect on tab close, inactivity, or after Colab's free-tier time limit — up to ~12 hours). Use this for quick testing only; for always-on hosting, use Render/Heroku/Docker as described in Deployment.
 
 **Common requirement across all platforms:** Python 3.10, `ffmpeg` binary available on PATH, and a reachable MongoDB instance.
 
